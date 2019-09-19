@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
-
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@
 }
 
 /* El estilo base para moviles */
-
 body {
     background-color: #112935;
     color: white;
@@ -22,18 +20,27 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .src-only {
     display: none;
 }
 
+/*Cambiando color a flecha y el margen superior e inferior*/
 .hide-mobile {
     display: none;
+    color:#0AC693;
+    margin-bottom: 6em; 
+    margin-top: -2em;
+}
+/*Dando tamaño a flecha*/
+.fa, .fas {
+    font-weight: 900;
+    font-size: 3em;
 }
 
-p {
+p{
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
@@ -51,17 +58,17 @@ p {
     top: 30%;
     right: 95%;
     font-size: 1.5rem;
+
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-}
 
+}
 .options i:last-child {
     font-size: 1.6rem;
 }
 
 /* Big area */
-
 .big-hero img {
     width: 150px;
 }
@@ -70,37 +77,36 @@ p {
     font-size: 1.875em;
     font-weight: 700;
     letter-spacing: 0.002em;
-    margin-top: 1em;
+    margin-top: 1em ;
 }
 
 .big-hero p {
     font-size: 0.7em;
-    ;
     color: #D7DEE6;
+
 }
 
 /* Social links*/
-
-.social-links {
+.social-links{
     list-style: none;
     padding: 0;
-    margin-top: 3em;
+    margin-top: -5em;
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: 2em;
+
 }
-
 /*Separando iconos*/
-
-.social-links li a {
+.social-links li a{
     color: #D7DEE6;
     text-decoration: none;
-    font-size: 2.5em;
+    font-size: 8em;
     margin: 1.5vh;
 }
 
 .green-area {
-    background-color: #0AC693;
+    background-color: #0AC693; 
 }
 
 .post {
@@ -133,7 +139,7 @@ p {
     padding-bottom: 2em;
 }
 
-.post article img {
+.post article img{
     height: 150px;
     width: 100%;
     object-fit: cover;
@@ -150,7 +156,7 @@ p {
 }
 
 .post article p {
-    color: #112935;
+    color:#112935;
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
@@ -159,8 +165,7 @@ p {
 /* About */
 
 /*Agregando margen inferior*/
-
-.about {
+.about{
     margin-bottom: 2em;
     margin-top: 2em;
 }
@@ -172,27 +177,27 @@ p {
     margin: 2em;
 }
 
-.bio-info img {
-    width: 200px;
+.bio-info img{
+   width: 200px;
 }
 
-.bio-info p {
+.bio-info p{
     font-size: 16px;
     padding: 2em;
     text-align: left;
     line-height: 25px;
     letter-spacing: 2px;
 }
-
+/*Padding izuierdo para espacio*/
 .contact {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
-    padding-left: 5em;
+    padding-left:5em ;
 }
 
-.contact *+* {
+.contact * + * {
     margin-top: 1.5em;
 }
 
@@ -200,14 +205,12 @@ p {
     display: flex;
     flex-direction: column;
 }
-
-/*que es*/
-
+/*corrigiendo fuente*/
 .contact-form label {
     font-weight: bold;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
     border-radius: 0px 2em;
@@ -217,39 +220,32 @@ p {
 
 /* Decorando placeholder */
 
-::-webkit-input-placeholder {
-    color: #D7DEE6;
-}
+::-webkit-input-placeholder { 
+    color: #D7DEE6; 
+} 
+ 
+:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
+ 
+::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
+ 
+:-ms-input-placeholder { color: #D7DEE6; }
 
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: #D7DEE6;
-}
-
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #D7DEE6;
-}
-
-:-ms-input-placeholder {
-    color: #D7DEE6;
-}
-
+/*Modificando tamaño boton submit*/
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
     color: white;
     font-size: 1rem;
-    width:40%;
+    width: 80%
 }
 
-.black-decoration {
+.black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
-footer {
+footer{
     background-color: #0D5061;
-    color: #D7DEE6;
+    color:#D7DEE6;
 }
 
 footer .social-links {
@@ -281,182 +277,132 @@ footer .social-links {
 .menu li a {
     color: white;
     text-decoration: none;
+    
 }
 
-.menu li a:hover {
+.menu li a:hover{
     color: red;
 }
 
-@media only screen and (min-width: 414px) {
- /* .about .container{
-      display: block;
-      flex-direction: column;
-      align-items: center;
-  }*/
-  
-
-    .container p {
-        font-size: 10pt;
-    }
-
-
-    .social-links {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-    }
-    .social-links i {
-        position: relative;
-        bottom: 1em;
-    }
-    .social-links li a {
-        color: #d7dee6;
-        text-decoration: none;
-        font-size: 100pt;
-        margin: 1.5vh;
-    }
-    .hide-desktop {
-        margin: 0.5em;
-    }
-    .bio-info {
-        margin-top: 2.5em;
-    }
-    .contact-form input[type="submit"] {
-        background-color: #f74442;
-        font-weight: 400;
-        color: white;
-        font-size: 1rem;
-        width: 40%;
-    }
- 
-}
-
-
 /* Pesonalizando estilo para tablets*/
-
 @media only screen and (min-width: 768px) {
+  
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    textarea {
-        height: 6em;
-    }
+    
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
         margin: 1rem 2rem;
         flex: 1 0 300px;
     }
+
+    textarea {
+        height: 6em;
+    }
+
+
     .logo {
         width: 100px;
         margin: 1.5em;
     }
+
     .show-desktop {
         display: block;
     }
+
     .hide-desktop {
         display: none;
     }
+
     .menu {
-        background-color: #112935;
+        background-color: #112935; 
         position: static;
         z-index: 20;
         width: auto;
-        height: auto;
+        height:auto;
         display: flex;
         margin-top: 1em;
-        /*margin:3em;*/
     }
+
     /*TODO: FALTA CSS */
-}
-
-.social-links {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.social-links i {
-    position: relative;
-    bottom: 1em;
-}
-
-.social-links li a {
-    color: #d7dee6;
-    text-decoration: none;
-    font-size: 100pt;
-    margin: 1.5vh;
-}
-
-footer .social-links {
-    color: #d7dee6;
-    text-decoration: none;
-    font-size: 100pt;
-    height: 110px;
-}
-
-footer .social-links i {
-    position: relative;
-    bottom: 0.5em;
-}
-
-.show-desktop>i {
-    color: #0ac693;
-    font-size: 40pt;
-    position: relative;
-    bottom: 1.2em;
-}
-
-.about .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 5em 1fr;
-}
-
-.about .container h2 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-}
-
-.bio-info {
-    grid-column: 1/2;
-    grid-row: 2;
-}
-
-
+} 
 
 @media only screen and (min-width: 1024px) {
-    /*TODO: FALTA CSS */
+
+       /*TODO: FALTA CSS */
+       /*Modificando distancia del logo para pantalla de computadora*/
+.logo{
+    margin-left:-7em; 
+    width: 9em;
 }
 
-
-
-    footer .social-links {
-        color: #d7dee6;
-        text-decoration: none;
-        font-size: 100pt;
-        height: 15vh;
+       .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1440px;
     }
-    footer .social-links i {
-        position: relative;
-        bottom: 0.5em;
+
+    .about .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: row wrap;
+        width:100vw;
     }
+
+    h2{
+        width: 100%;
+    }
+
+    .bio-info{
+        width: 46%;
+    }
+
+    .contact{
+        width: 46%;
+    }
+
 }
 
 @media only screen and (min-width: 1440px) {
+
     /*TODO: FALTA CSS */
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
+    }
+
+    .contact-form input[type=submit] {
+        background-color: #F74442;
+        font-weight: 400;
+        color: white;
+        font-size: 1rem;
+        width:40%
+    }
+
+    .about .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: row wrap;
+        width:100vw;
+    }
+
+    h2{
+        width: 100%;
+    }
+
+    .bio-info{
+        width: 46%;
+    }
+
+    .contact{
+        width: 46%;
     }
 }
