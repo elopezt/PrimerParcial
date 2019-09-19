@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
@@ -41,7 +42,6 @@ p{
     width: 90px;
     margin: 1em;
     height:16;
-    content: url(/images/isotipo.svg);
 }
 
 
@@ -97,7 +97,7 @@ p{
     color: #D7DEE6;
     text-decoration: none;
     font-size: 10em;
-    margin-right: 30px;
+   margin: 1.5vh;
 }
 
 
@@ -182,8 +182,6 @@ p{
     text-align: left;
     line-height: 25px;
     letter-spacing: 2px;
-  
- 
 }
 /*Moiendo formulario*/
 .contact {
@@ -191,7 +189,6 @@ p{
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
-    align-items: flex-end;
     
 }
 
@@ -272,9 +269,13 @@ footer .social-links {
 
 .menu li a {
     color: white;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
+/* agregando color a menu al seleccionar*/
+.menu li a:hover{
+  color: red;
+}
+    
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
@@ -340,4 +341,48 @@ footer .social-links {
         max-width: 1440px;
     }
 }
+
+a.hide-mobile.show-desktop{
+    justify-content: center;
+    font-size: 8em;
+    color:#0AC693;
+    margin-top: -0.5em;
+}
+
+/*Iphone*/
+@media only screen and (min-width:750px){
+.about .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
