@@ -287,6 +287,11 @@ footer .social-links {
     color: red;
 }
 
+footer .social-links li{
+margin: -4em  0em -2.3em;
+padding: 0em 1em;
+}
+
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
