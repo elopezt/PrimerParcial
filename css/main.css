@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
+
+/*crea un pseudo-elemento del primer y el ultimo hijo del elemento seleccionado, en este caso de todo ya que se ha antepuesto un
+ asterisco y les aplica margen, padding tamaño de las cajas que contienen estos elementos y tamaño de fuente*/
+
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -10,6 +14,10 @@
 }
 
 /* El estilo base para moviles */
+
+/*Aplicando color de fondo,color de letra, aplicando tipo de letra, alineando texto del cuerpo y dando tamanio a la fuente del
+ cuerpo*/
+
 body {
     background-color: #112935;
     color: white;
@@ -18,40 +26,56 @@ body {
     font-weight: 400;
 }
 
+/*Usando display para que el header se vaya alineando de acuerdo al comportamiento de la pagina y  el space between para que los
+ elemetos del header se distribuyan uniformemente sobre este*/
+
 .header {
     display: flex;
     justify-content: space-between;
 }
+
+/*Mantiene el texto fijo para el logo*/
 
 .src-only {
     display: none;
 }
 
 /*Cambiando color a flecha y el margen superior e inferior*/
+
+/*Se aplican las propiedades(esta fija, el color, margen superior e inferior para que quede adecuada a la imagen) 
+para la flecha abajo de los iconos de redes sociales que estan en la parte de arriba*/
+
 .hide-mobile {
     display: none;
-    color:#0AC693;
-    margin-bottom: 6em; 
+    color: #0AC693;
+    margin-bottom: 6em;
     margin-top: -2em;
 }
+
 /*Dando tamaño a flecha*/
+
 .fa, .fas {
     font-weight: 900;
     font-size: 3em;
 }
 
-p{
+/*Se les aplican las propiedades de tamaño, padding y espacio entre líneas para todos los parrafos del archivo html*/
+
+p {
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
 }
-/*Colocando logo y menu a la par*/
+
+/*Manipulando margenes para colocar logo y menu a la par*/
+
 .logo {
-  
     width: 120px;
-    margin-top: 4em;
+    margin-top: 3em;
     margin-left: 3em;
 }
+
+/*establece un display flex para acomodar los elementos dentro de la clase options y que estos se vayan alineando al inicio*/
 
 .options {
     color: inherit;
@@ -60,37 +84,45 @@ p{
     top: 30%;
     right: 95%;
     font-size: 1.5rem;
-
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-
 }
+
+/*cambia el tamaño de la fuente al ultimo elemento perteneciente a la clase options*/
+
 .options i:last-child {
     font-size: 1.6rem;
 }
 
-/* Big area  separando imagen de menu desplegable*/
+/* Big area  
+separando foto de Nestor de menu desplegable*/
+
 .big-hero img {
     width: 150px;
     margin-top: 3em;
 }
 
+/*Aplicando propiedades(tamaño de fuente, grosor, espaciado entre cada letra,
+y margen superior para separarño) a h2 de big hero que es lo que corresponde al Nombre "Nestor Aldana"*/
+
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
     letter-spacing: 0.002em;
-    margin-top: 1em ;
+    margin-top: 1em;
 }
+
+/*Aplicando tamaño de letra y color al parrafo que esta abajo de la foto"*/
 
 .big-hero p {
     font-size: 0.7em;
     color: #D7DEE6;
-
 }
 
 /* Social links*/
-.social-links{
+
+.social-links {
     list-style: none;
     padding: 0;
     margin-top: -5em;
@@ -98,24 +130,31 @@ p{
     flex-direction: row;
     justify-content: center;
     margin-bottom: 2em;
-
 }
-/*Separando iconos*/
-.social-links li a{
+
+/*seleccionando la clase social-links y todos los elementos que sean lista en este caso los iconos de github y twitter, 
+se separan los iconos por medio del margen, se cambia el tamaño y se le asigna un color*/
+
+.social-links li a {
     color: #D7DEE6;
     text-decoration: none;
     font-size: 8em;
     margin: 1.5vh;
 }
 
+/*Se selecciona la clase de la area de los articulos y se le asigna un color de fondo*/
+
 .green-area {
-    background-color: #0AC693; 
+    background-color: #0AC693;
 }
 
 .post {
     padding: 1em;
     margin-bottom: -2px;
 }
+
+/*se le asignan al h2 del area de los articulos("Publicaciones") las propiedades para transformar la letra a mayuscula, se 
+le asigna un grosor a la letra, un tamaño y un margen*/
 
 .post h2 {
     text-transform: uppercase;
@@ -124,15 +163,22 @@ p{
     margin: 1em;
 }
 
+/*Se seleccionan los articulos(ul) de la clase post  y se alinean al inicio*/
+
 .post ul {
     list-style: none;
+    align-items: flex-start;
 }
+
+/*Se le asigna margen, altura minima y anchura maxima a cada uno de los articulos*/
 
 .post ul li {
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
 }
+
+/*establece las caracteristicas del elemento article dentro de la clase post, como color de fondo, radio del borde, padding*/
 
 .post ul li article {
     overflow: hidden;
@@ -142,15 +188,15 @@ p{
     padding-bottom: 2em;
 }
 
-/* .post ul li:first-child, ul li:first-child + li{
-    margin-right: 4em;
-} */
+/*se les asignan las mismas dimensiones a las imagenes de cada articulo*/
 
-.post article img{
+.post article img {
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
+
+/*Se le asignan las mismas caracteristicas a los titulos de los 3 articulos*/
 
 .post article h3 {
     color: #0D5061;
@@ -162,8 +208,10 @@ p{
     text-overflow: ellipsis;
 }
 
+/*Se le asignan las mismas caracteristicas a lol contenidos de los 3 articulos, o sea a los parrafos*/
+
 .post article p {
-    color:#112935;
+    color: #112935;
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
@@ -171,11 +219,15 @@ p{
 
 /* About */
 
-/*Agregando margen inferior*/
-.about{
+/*Agregando margen inferior  y superior a la clase about que es la que contiene al formulario, un logo y una imagen*/
+
+.about {
     margin-bottom: 2em;
     margin-top: 2em;
 }
+
+/*Se asignan propiedades como transformar la letra a mayuscula,grosor y tamaño de la fuente, y un margen al h2 de la clase about 
+que corresponde a "Acerca de"*/
 
 .about h2 {
     text-transform: uppercase;
@@ -184,40 +236,56 @@ p{
     margin: 2em;
 }
 
-.bio-info img{
-   width: 200px;
+/*Selecciona la imagen contenida en la clase bio-info y se le asigna un ancho*/
+
+.bio-info img {
+    width: 200px;
 }
 
-.bio-info p{
+/*Se seleccionan los parrafos de la clase bio-info y se leasignan caracteristicas tales como: tamaño de fuente, padding, se alinea
+ el texto a la izquierda, espaciado*/
+
+.bio-info p {
     font-size: 16px;
     padding: 2em;
     text-align: left;
     line-height: 25px;
     letter-spacing: 2px;
 }
-/*Padding izuierdo para espacio*/
+
+/*Seleccionando la clase contacto se asignan caracteristicas de padding y display flex para acomodar los elementos*/
+
 .contact {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 0px 1em;
-    padding-left:5em ;
+    padding-left: 5em;
 }
 
-.contact * + * {
+/*selecciona  la clase contact y fija un margen superior a todos los elementos de esta*/
+
+.contact *+* {
     margin-top: 1.5em;
 }
+
+/*Se le asigna flex a la parte del formulario de abajo para poder acomodar los elementos  a la par*/
 
 .contact-form {
     display: flex;
     flex-direction: column;
 }
-/*corrigiendo fuente*/
+
+/*convierte a negrita todos los elementos label dentro de la clase contact-form (formulario)*/
+
 .contact-form label {
     font-weight: bold;
 }
 
-.contact-form input, .contact-form textarea{
+/*establece las caracteristicas de paddig, borde, borde del radio para los elementos input y textarea dentro de la clase 
+contact-form*/
+
+.contact-form input, .contact-form textarea {
     padding: 1rem 2rem;
     border: none;
     border-radius: 0px 2em;
@@ -227,17 +295,33 @@ p{
 
 /* Decorando placeholder */
 
-::-webkit-input-placeholder { 
-    color: #D7DEE6; 
-} 
- 
-:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
- 
-::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
- 
-:-ms-input-placeholder { color: #D7DEE6; }
+::-webkit-input-placeholder {
+    color: #D7DEE6;
+}
 
-/*Modificando tamaño boton submit*/
+/*establece color del texto para las diferentes versiones de navegadores*/
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #D7DEE6;
+}
+
+/*establece color del texto para las diferentes versiones de navegadores*/
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #D7DEE6;
+}
+
+/*establece color del texto para las diferentes versiones de navegadores*/
+
+:-ms-input-placeholder {
+    color: #D7DEE6;
+}
+
+/*Se aplican caracteristicas para el boton submit del formulario, como color de fondo, color de letra,tamaño,ancho.
+ Modificando tamaño boton submit*/
+
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
@@ -246,18 +330,27 @@ p{
     width: 80%
 }
 
-.black-decoration{
+/*selecciona una imagen de fondo para la clase black-decoration*/
+
+.black-decoration {
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
-footer{
+/*Se selecciona el footer y se le aplica un color de fondo, y un color para la letra contenida en este*/
+
+footer {
     background-color: #0D5061;
-    color:#D7DEE6;
+    color: #D7DEE6;
 }
 
+/*Se seleccionan los iconos de twitter y github colocados en el footer y se les asigna un margen*/
+
 footer .social-links {
-    margin: 0;
+    margin: 0px;
 }
+
+/*Se selecciona la clase menu colocada en el borde superior derecho de la pagina y se le asignan caracteristicas como color de 
+fondo, posicion,altura, anchura*/
 
 .menu {
     background-color: #112935;
@@ -269,11 +362,17 @@ footer .social-links {
     height: calc(100vh - 60px);
 }
 
+/*Se selecciona la clase menu y se asignan caracteristicas de estilo, establece  padding y alinea el texto a la izquierda 
+dentro de la clase menu*/
+
 .menu {
     list-style: none;
     text-align: left;
     padding: 1em;
 }
+
+/*establece que el padding y el margen superior de los elementos li dentro de la clase menu, se le asigna un display block 
+para que el comportamiento de estos sea como un bloque.*/
 
 .menu li {
     display: block;
@@ -281,156 +380,161 @@ footer .social-links {
     margin-top: 5px;
 }
 
+/*establece el color del texto y que no tenga ninguna decoracion para todos los elementos li y a de la clase menu*/
+
 .menu li a {
     color: white;
     text-decoration: none;
-    
 }
 
-.menu li a:hover{
+/*Se asigna un color de letra al pasar el mouse o dar click sobre alguno de los elementos li a de la clase menu*/
+
+.menu li a:hover {
     color: red;
 }
 
-footer .social-links li{
-margin: -4em  0em -2.3em;
-padding: 0em 1em;
+/*Se establecen dimensiones, margenes, padding para los iconos de twitter y github pero que han sido colocados en el footer*/
+
+/*Acercando iconos de redes sociales y disminuyendo tamaño*/
+
+footer .social-links li {
+    margin: -4em 0em -2.3em;
+    padding: 0em 1em;
+    margin-right: -2em;
+    font-size: 1em;
 }
 
-
 /* Pesonalizando estilo para tablets*/
+
 @media only screen and (min-width: 768px) {
-  
+    /*Se seleccionan los articulos(ul) de la clase post  y se alinean al inicio*/
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
     }
-    
+    /*Se le asigna margen, altura minima y anchura maxima a cada uno de los articulos*/
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
         margin: 1rem 1rem;
         flex: 1 0 300px;
     }
-
-
-
+    /*Se asigna altura diferente al text area asignado para escribir un mensaje en el formulario*/
     textarea {
         height: 6em;
     }
-
-/*Margin-top para poner el logo a la par del menu*/
+    /*Se asigna dimension de ancho y margen a los elementos dela clase logoCambiar margin-top para poner el logo a la par del
+     menu*/
     .logo {
         width: 100px;
         margin: 1.5em;
         margin-top: 2.6em
     }
-
+    /*se selecciona la clase show-desktop y hace que el comportamiento del elemento sea como un bloque con display block*/
     .show-desktop {
         display: block;
     }
-
+    /*se selecciona clase hide-desktop y oculta o muestra flecha que esta en la parte superior de la pagina, abajo de la foto y 
+    el parrafo */
     .hide-desktop {
         display: none;
     }
-
+    /*Se selecciona la clase menu colocada en el borde superior derecho de la pagina y se le asignan caracteristicas como color de 
+fondo, posicion,altura, anchura, margen superior para alinear el menu con  el logo de la izquierda*/
     .menu {
-        background-color: #112935; 
+        background-color: #112935;
         position: static;
         z-index: 20;
         width: auto;
-        height:auto;
+        height: auto;
         display: flex;
         margin-top: 1em;
     }
-/*Disminuyendo distancia entre foto y menu superior*/
-    .big-hero img{
+    /*seleccionando las imagenes contenidad en la clase big-hero aplico propiedades para disminuir distancia entre foto y menu 
+    superior*/
+    .big-hero img {
         margin-top: -3em;
-    }   
-} 
-
-
-
+    }
+}
 
 @media only screen and (min-width: 1024px) {
-/*Modificando distancia del logo para pantalla de tablet pro*/
-    .logo{
+    /*Seleccionando la clase logo modifico distancia del logo para pantalla de tablet pro*/
+    .logo {
         width: 8em;
         margin-left: -2em;
     }
-
-       .container {
-        width: 80%;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
-    .about .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-flow: row wrap;
-        width:100vw;
-    }
-
-    h2{
-        width: 100%;
-    }
-
-    .bio-info{
-        width: 46%;
-    }
-
-    .contact{
-        width: 46%;
-    }
-
-
-}
-
-/*para que se pueda leer el tercer articulo completo*/
-@media only screen and (min-width: 1024px) and (min-height: 1366px) {
-    article{
-        font-size: 0.5em;
-    }
-}
-
-
-@media only screen and (min-width: 1440px) {
-
-    /*TODO: FALTA CSS */
+    /*se selecciona los container y se aplican propiedades de ancho, margen y ancho maximo */
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
     }
+    /*se selecciona la clase about contenida en un container y se aplica display para ajustar los elementos, y propiedades de flex */
+    .about .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 100vw;
+    }
+    /*Se seleccionan todos los h2 y se les asigna un mismo ancho*/
+    h2 {
+        width: 100%;
+    }
+    /*se selecciona la clase bio-info y se le asigna un mismo ancho a todos los elementos de este*/
+    .bio-info {
+        width: 46%;
+    }
+    /*se seleccionala clase contact y se le asigna un mismo ancho a todos los elementos de este*/
+    .contact {
+        width: 46%;
+    }
+}
 
+/*para que se pueda leer el tercer articulo completo en la de 1024 cambio el tamaño de fuente para los articulos*/
+
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+    article {
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    /*Selecciona clase container y asigna ancho, margnen y un ancho maximo para todo lo que contiene*/
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    /*Se asignan las caracteristicas para el boton submit del formulario de la calse contact, tales como color de fondo, tamaño de
+    letra, color de letra,ancho,*/
     .contact-form input[type=submit] {
         background-color: #F74442;
         font-weight: 400;
         color: white;
         font-size: 1rem;
-        width:40%
+        width: 40%
     }
-
-    .about .container{
+    /*se selecciona la clase about contenida en un container y se aplica display para ajustar los elementos, y propiedades de flex */
+    .about .container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-flow: row wrap;
-        width:100vw;
+        width: 100vw;
     }
-
-    h2{
+    /*Se seleccionan todos los h2 y se les asigna un mismo ancho*/
+    h2 {
         width: 100%;
     }
-
-    .bio-info{
+    /*se selecciona la clase bio-info y se le asigna un mismo ancho a todos los elementos de este*/
+    .bio-info {
         width: 46%;
     }
-
-    .contact{
+    /*se seleccionala clase contact y se le asigna un mismo ancho a todos los elementos de este*/
+    .contact {
         width: 46%;
     }
 }
